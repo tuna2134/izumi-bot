@@ -1,4 +1,5 @@
 from janome.tokenizer import Tokenizer
+import json
 
 
 with open("data/message.txt") as f:
@@ -20,3 +21,6 @@ for text in texts:
             model[last] = [message]
         last = message
 print(model)
+
+with open("model.json", "w") as f:
+    json.dump(data, f)
