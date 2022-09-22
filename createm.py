@@ -5,4 +5,11 @@ import random
 with open("model.json") as f:
     model = json.load(f)
 
-print(random.choice(list(model)))
+last = random.choice(list(model))
+message = [last]
+
+while True:
+    last = random.choice(model[last])
+    message.append(last)
+
+print(last)
