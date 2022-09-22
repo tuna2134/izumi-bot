@@ -9,6 +9,7 @@ last = ""
 t = Tokenizer()
 for text in texts:
     for token in t.tokenize(text):
+        print(model)
         message = str(token).split()[0]
         if last == "":
             last = message
