@@ -13,6 +13,8 @@ for text in texts:
         if last == "":
             last = message
             continue
+        if message == "。":
+            continue
         if message in model:
             model[last].append(message)
         else:
