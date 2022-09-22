@@ -7,11 +7,9 @@ last = ""
 
 t = Tokenizer()
 for token in t.tokenize(text):
-    print(token)
-    print(model)
     message = str(token).split()[0]
+    print(message in model)
     if message in model:
-        print(message)
         model[last].append(message)
     else:
         model[last] = [message]
