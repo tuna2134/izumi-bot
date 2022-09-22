@@ -11,10 +11,8 @@ t = Tokenizer()
 for text in texts:
     for token in t.tokenize(text):
         message = str(token).split()[0]
-        if last == "":
+        if last in ["", "。"]:
             last = message
-            continue
-        if last == "。":
             continue
         if last in model:
             if not message in model[last]:
