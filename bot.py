@@ -6,10 +6,7 @@ last = ""
 
 t = Tokenizer()
 for token in t.tokenize("マイクラしたい。"):
-    if token is None:
-        continue
-    print(token)
-    message = token.split()[0]
+    message = str(token).split()[0]
     if message in model:
         model[message].append(last)
     else:
