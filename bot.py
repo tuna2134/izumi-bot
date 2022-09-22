@@ -10,6 +10,7 @@ for token in t.tokenize("TokenCountFilter を使うと，入力文字列中の�
     print(model)
     message = str(token).split()[0]
     if message in model:
+        print(message)
         model[last].append(message)
     else:
         model[last] = [message]
