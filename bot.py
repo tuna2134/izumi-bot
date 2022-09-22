@@ -7,7 +7,7 @@ last = None
 t = Tokenizer()
 for token in t.tokenize("マイクラしたい。"):
     if last is None:
-        continue
+        print("ok")
     message = str(token).split()[0]
     if message in model:
         model[last].append(message)
