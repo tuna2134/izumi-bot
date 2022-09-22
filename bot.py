@@ -8,6 +8,8 @@ last = ""
 t = Tokenizer()
 for token in t.tokenize(text):
     message = str(token).split()[0]
+    if message == "":
+        continue
     if message in model:
         model[last].append(message)
     else:
