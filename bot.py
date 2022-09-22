@@ -4,7 +4,6 @@ import json
 
 with open("data/message.txt") as f:
     texts = [m.replace(" ", "").replace("\n", "") for m in f.readlines()]
-print(texts)
 model = {}
 last = ""
 
@@ -14,6 +13,8 @@ for text in texts:
         message = str(token).split()[0]
         if last == "":
             last = message
+            continue
+        if last == "。":
             continue
         if last in model:
             if not message in model[last]:
