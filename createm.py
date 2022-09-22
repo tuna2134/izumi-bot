@@ -14,4 +14,4 @@ while True:
     if last in ["。", "！"]:
         break
 
-print(message)
+print("".join(m for m in message))
