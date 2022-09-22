@@ -7,10 +7,10 @@ last = ""
 
 t = Tokenizer()
 for token in t.tokenize(text):
+    message = str(token).split()[0]
     if last == "":
         last = message
         continue
-    message = str(token).split()[0]
     if message in model:
         model[last].append(message)
     else:
