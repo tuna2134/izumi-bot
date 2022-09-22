@@ -11,7 +11,7 @@ message = [last]
 while True:
     last = random.choice(model[last])
     message.append(last)
-    if last in ["。", "！"]:
+    if last in ["。", "！", "？"]:
         break
 
 print("".join(m for m in message))
