@@ -9,9 +9,9 @@ last = random.choice(list(model))
 message = [last]
 
 while True:
-    if last == ["。", "！"]:
-        break
     last = random.choice(model[last])
     message.append(last)
+    if last in ["。", "！"]:
+        break
 
 print(message)
