@@ -3,7 +3,7 @@ import json
 
 
 with open("data/message.txt") as f:
-    texts = [m.replace(" ", "") for m in f.readlines()]
+    texts = [m.replace(" ", "").replace("\n", "") for m in f.readlines()]
 print(texts)
 model = {}
 last = ""
