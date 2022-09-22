@@ -17,7 +17,10 @@ for text in texts:
         if message == "。":
             continue
         if message in model:
-            model[last].append(message)
+            try:
+                model[last].append(message)
+            except KeyError:
+                pass
         else:
             model[last] = [message]
         last = message
