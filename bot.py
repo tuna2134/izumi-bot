@@ -23,4 +23,4 @@ for text in texts:
 print(model)
 
 with open("model.json", "w") as f:
-    json.dump(data, f)
+    json.dump(model, f)
