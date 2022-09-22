@@ -2,12 +2,10 @@ from janome.tokenizer import Tokenizer
 
 
 model = {}
-last = None
+last = ""
 
 t = Tokenizer()
-for token in t.tokenize("マイクラしたい。"):
-    if last is None:
-        print("ok")
+for token in t.tokenize("TokenCountFilter を使うと，入力文字列中の単語出現頻度を数えることができます。"):
     message = str(token).split()[0]
     if message in model:
         model[last].append(message)
