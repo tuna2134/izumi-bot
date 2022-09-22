@@ -5,4 +5,4 @@ import random
 with open("model.json") as f:
     model = json.load(f)
 
-print(random.choice(model))
+print(random.choice(list(model)))
