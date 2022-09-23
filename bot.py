@@ -10,6 +10,7 @@ last = "__BEGIN__"
 t = Tokenizer("data/userdic.csv", udic_enc="utf8")
 for text in texts:
     for token in t.tokenize(text):
+        print(token)
         message = str(token).split()[0]
         if last in ["。", "！", "？"]:
             last = message
