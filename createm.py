@@ -6,7 +6,7 @@ with open("model.json") as f:
     model = json.load(f)
 
 last = random.choice(model["__BEGIN__"])
-begin = "__BEGIN__"
+message = [last]
 
 while True:
     last = random.choice(model[last])
