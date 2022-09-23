@@ -5,7 +5,7 @@ import random
 with open("model.json") as f:
     model = json.load(f)
 
-last = random.choice(list(model))
+last = random.choice(model["__BEGIN__"])
 message = [last]
 
 while True:
