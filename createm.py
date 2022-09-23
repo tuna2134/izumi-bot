@@ -7,13 +7,10 @@ with open("model.json") as f:
 
 last = random.choice(model["__BEGIN__"])
 begin = "__BEGIN__"
-message = [last]
 
 while True:
     last = random.choice(model[last])
-    model[begin].remove(last)
     message.append(last)
-    begin = last
     if last in ["。", "！", "？"]:
         break
 
