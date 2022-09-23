@@ -7,7 +7,7 @@ with open("data/message.txt") as f:
 model = {}
 last = "__BEGIN__"
 
-t = Tokenizer()
+t = Tokenizer("data/userdic.csv", udic_enc="utf8")
 for text in texts:
     for token in t.tokenize(text):
         message = str(token).split()[0]
